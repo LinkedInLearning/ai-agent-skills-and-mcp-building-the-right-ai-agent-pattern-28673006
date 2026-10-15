@@ -1,3 +1,9 @@
+node_modules/
+*/orbit-backend/data/
+.DS_Store
+# Reports learners save while following along
+*/orbit-launch/reports/*.md
+!*/orbit-launch/reports/README.md
 .DS_Store
 node_modules
 .tmp

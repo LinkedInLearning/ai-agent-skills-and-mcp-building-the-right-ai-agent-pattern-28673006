@@ -1,0 +1,2 @@
+# Chapter 4 brings the Skill back into .claude/skills.
+parked-skills

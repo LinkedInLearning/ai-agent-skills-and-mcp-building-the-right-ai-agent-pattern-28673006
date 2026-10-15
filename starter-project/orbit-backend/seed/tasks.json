@@ -1,0 +1,13 @@
+[
+  { "id": "T-101", "title": "Freeze beta feature set", "milestone": "M1", "owner": "Maya Chen", "status": "done", "due": "2026-09-30", "progress": 100 },
+  { "id": "T-102", "title": "Triage beta feedback backlog", "milestone": "M1", "owner": "Leo Martins", "status": "in_progress", "due": "2026-10-16", "progress": 70 },
+  { "id": "T-104", "title": "Integrate PayGate v2 checkout", "milestone": "M2", "owner": "Priya Nair", "status": "blocked", "due": "2026-10-21", "progress": 45, "notes": "Blocked on PayGate sandbox certification. PayGate moved the certification ETA from Oct 12 to Nov 2 (vendor email, Oct 3). Finishing integration and the load test needs about 3 weeks after certification." },
+  { "id": "T-105", "title": "Migrate billing records to v2 schema", "milestone": "M2", "owner": "Priya Nair", "status": "in_progress", "due": "2026-10-23", "progress": 60 },
+  { "id": "T-109", "title": "Fix duplicate charge on checkout retry", "milestone": "M2", "owner": "Sam Rivera", "status": "in_progress", "due": "2026-10-14", "progress": 20, "notes": "Linked tickets: TCK-1987, TCK-1992, TCK-2003, TCK-2010. Root cause not yet confirmed." },
+  { "id": "T-117", "title": "Book external penetration test", "milestone": "M3", "owner": null, "status": "todo", "due": "2026-10-09", "progress": 0, "notes": "Pen test vendor needs 6 weeks lead time and the test takes 1 week. Findings must be fixed before security sign-off (M3)." },
+  { "id": "T-118", "title": "Threat model review", "milestone": "M3", "owner": "Daniel Okafor", "status": "in_progress", "due": "2026-10-23", "progress": 50 },
+  { "id": "T-121", "title": "Write admin and onboarding docs", "milestone": "M4", "owner": "Ana Souza", "status": "in_progress", "due": "2026-11-06", "progress": 35, "notes": "Ana is out for one week in mid-October." },
+  { "id": "T-122", "title": "Launch blog post and announcement", "milestone": "M4", "owner": "Ana Souza", "status": "todo", "due": "2026-11-12", "progress": 0 },
+  { "id": "T-125", "title": "Load test checkout at 5x beta traffic", "milestone": "M2", "owner": "Sam Rivera", "status": "todo", "due": "2026-10-30", "progress": 0, "notes": "Cannot start until T-104 is done." },
+  { "id": "T-130", "title": "Update status page integrations", "milestone": "M4", "owner": "Leo Martins", "status": "done", "due": "2026-09-29", "progress": 100 }
+]

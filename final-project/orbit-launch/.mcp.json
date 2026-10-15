@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "orbit": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["../orbit-backend/server.js"]
+    }
+  }
+}

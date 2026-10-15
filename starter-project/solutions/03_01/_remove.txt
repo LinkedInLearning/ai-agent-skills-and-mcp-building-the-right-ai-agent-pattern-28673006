@@ -1,0 +1,2 @@
+# Chapter 3 sets the Skill aside so you can see MCP on its own.
+.claude/skills/launch-risk-review

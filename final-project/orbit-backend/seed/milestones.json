@@ -1,0 +1,7 @@
+[
+  { "id": "M1", "name": "Beta feedback freeze", "due": "2026-10-16", "status": "on_track", "owner": "Maya Chen", "tasks": ["T-101", "T-102"] },
+  { "id": "M2", "name": "Payments v2 live in production", "due": "2026-10-26", "status": "at_risk", "owner": "Priya Nair", "tasks": ["T-104", "T-105", "T-109", "T-125"], "note": "Depends on PayGate sandbox certification." },
+  { "id": "M3", "name": "Security review sign-off", "due": "2026-10-30", "status": "not_started", "owner": "Daniel Okafor", "tasks": ["T-117", "T-118"] },
+  { "id": "M4", "name": "Docs and launch content complete", "due": "2026-11-09", "status": "on_track", "owner": "Ana Souza", "tasks": ["T-121", "T-122"] },
+  { "id": "M5", "name": "General availability", "due": "2026-11-16", "status": "planned", "owner": "Maya Chen", "tasks": [] }
+]

@@ -1,0 +1,18 @@
+{
+  "name": "orbit-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simulated Orbit Labs internal systems (project tracker and beta support desk) exposed through an MCP server.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "reset": "node scripts/reset.js",
+    "demo:new-ticket": "node scripts/new-ticket.js",
+    "check": "node scripts/check.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^4.0.0"
+  }
+}

@@ -1,48 +1,73 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].
+# AI Agent Skills and MCP: Course Project
 
-![lil-thumbnail-url]
+Exercise files for the LinkedIn Learning course **AI Agent Skills and MCP: Building the Right AI Agent Pattern** by Stephen Simon.
 
-## Course Description
+In this course you build one workflow, a weekly launch risk review for the fictional company Orbit Labs, four ways: as a prompt, as an Agent Skill, with MCP, and with Skills and MCP together.
 
-_See the readme file in the main branch for updated instructions and information._
-## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+## What's in this repo
 
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
+| Folder | Use it for |
+|---|---|
+| `starter-project/` | The project you start the course with. Follow along video by video from here. |
+| `final-project/` | The completed project as it looks at the end of the course. Use it as a reference. |
 
-When switching from one exercise files branch to the next after making changes to the files, you may get a message like this:
+Each folder is self-contained, with two parts:
 
-    error: Your local changes to the following files would be overwritten by checkout:        [files]
-    Please commit your changes or stash them before you switch branches.
-    Aborting
+- `orbit-launch/` is the workspace. Open this folder in your AI agent.
+- `orbit-backend/` plays the role of Orbit Labs' company systems (a project tracker and a beta support desk) behind a small MCP server. Don't open it in your agent. In Chapter 3 your agent reaches it through MCP.
 
-To resolve this issue:
-	
-    Add changes to git using this command: git add .
-	Commit changes using this command: git commit -m "some message"
+The starter project also has a `solutions/` folder with the end state of every hands-on video.
 
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+## Requirements
 
-## Instructor
+- Node.js 20 or later
+- An AI coding agent that supports Agent Skills and MCP. The course uses Claude Code.
 
-Instructor name
+No cloud accounts or API tokens are needed. Everything runs on your machine.
 
-Instructor description
+## Get started
 
-                            
+```bash
+cd starter-project/orbit-backend
+npm install
+npm run check
+cd ../orbit-launch
+claude
+```
 
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/).
+`npm run check` should list seven tools, two resources, and `Open tickets older than 7 days: 6`. Then follow the handout for each video.
 
+## Catch up to any video
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
+If you fall behind or skip ahead, run this from the `starter-project` folder:
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
+```bash
+node solutions/catch-up.mjs 03_01
+```
 
+It brings `orbit-launch/` to the end state of that video. See `starter-project/solutions/README.md` for the list of checkpoints.
+
+## Reset the company data
+
+Some videos add tickets or write risk items. To start clean, run this from `orbit-backend/`:
+
+```bash
+npm run reset
+```
+
+## Try the final project
+
+```bash
+cd final-project/orbit-backend
+npm install
+cd ../orbit-launch
+claude
+```
+
+Approve the `orbit` MCP server when Claude Code asks, then send:
+
+```text
+Do this week's launch review.
+```
+
+The agent loads the `launch-risk-review` Skill, gathers live data through the `orbit` server, writes the report, and records new High risks in the risk register. Run `npm run demo:new-ticket` in `orbit-backend/` first if you want to see the SSO outage appear in the review.
