@@ -1,8 +1,11 @@
 # AI Agent Skills and MCP: Course Project
 
-Exercise files for the LinkedIn Learning course **AI Agent Skills and MCP: Building the Right AI Agent Pattern** by Stephen Simon.
+Exercise files for the LinkedIn Learning course **AI Agent Skills and MCP: Building the Right AI Agent Pattern** by Stephen Simon. The full course is available from
+[LinkedIn Learning][lil-course-url].
 
 In this course you build one workflow, a weekly launch risk review for the fictional company Orbit Labs, four ways: as a prompt, as an Agent Skill, with MCP, and with Skills and MCP together.
+
+![course-name-alt-text][lil-thumbnail-url]
 
 ## What's in this repo
 
@@ -71,3 +74,10 @@ Do this week's launch review.
 ```
 
 The agent loads the `launch-risk-review` Skill, gathers live data through the `orbit` server, writes the report, and records new High risks in the risk register. Run `npm run demo:new-ticket` in `orbit-backend/` first if you want to see the SSO outage appear in the review.
+
+
+<!-- TODO: fill in these URLs -->
+
+[lil-course-url]: https://www.linkedin.com/learning/ai-agent-skills-and-mcp-building-the-right-ai-agent-pattern-ipc-projects
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4D0DAQGJK3p4mWm3ew/learning-public-crop_675_1200/B4DaGJeZI1GUAY-/0/1793307810011?e=2147483647&v=beta&t=A1voYKyiCoAolJQqpOrOyBT3ioL1lBqiuxiXURa5pME
+
